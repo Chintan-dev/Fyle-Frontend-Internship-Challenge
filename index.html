@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Fyle Frontend Internship Challenge</title>
+        <link rel="stylesheet" href="./style.css">
+        <link rel="stylesheet" href="./bootstrap.min.css">
+        <script src="./angular.min.js"></script>
+        <link rel="stylesheet" href="./bar.css">
+        <!-- <script src="./main2.js"></script> -->
+        <script src="./app.js"></script>
+</head>
+
+<body ng-app="data" ng-controller="controller1">
+        <div class="boxloader" id="loading">
+                <div class="loader"></div>
+        </div>
+        <!-- <div class="meter animate" id="loading">
+                <span style="width: 100%"><span></span></span>
+        </div> -->
+        <div class="container-sm container">
+                <div class="row">
+                        <div class="col header"
+                                style="display: flex;flex-wrap: wrap;justify-content: center;align-items: center;">
+                                <div class="userimgbox">
+                                        <img src="{{userprofile}}" alt="">
+                                </div>
+                                <div class="link">
+                                        <a href="{{link}}">
+                                                <img src="./link.jpg" alt="" width="30px">
+                                                {{link}}</a>
+                                </div>
+                        </div>
+
+                        <div class="col" style="margin: 30px 0;">
+                                <div class="data">
+                                        <div class="name">
+                                                <h1>{{username}}</h1>
+                                        </div>
+                                        <p>bio goes here</p>
+                                        <!-- <div class="bio">bio goes here</div> -->
+                                        <p>
+                                        <div class="loction">
+                                                <img class="iconloction" src="./loction icon.jpg" alt="">
+                                                india
+                                        </div>
+                                        </p>
+                                        <div class="link">
+                                                <a href="{{userlink}}">
+                                                        {{userlink}}</a>
+                                        </div>
+                                </div>
+                        </div>
+                        <div class="col"></div>
+                        <div class="col"></div>
+                </div>
+
+                <div class="row" id="users"
+                        style="display: flex;flex-wrap: wrap;justify-content: center;align-items: center;margin: 20px 0;">
+
+
+                </div>
+        </div>
+        <!-- <script src="./main.js"></script> -->
+
+        <!-- <script src="./app.js"></script> -->
+
+
+        <script>
+                $(window).on("load", function () {
+                        $(".boxloader").fadeOut(1000);
+                });
+        </script>
+</body>
+
+</html>

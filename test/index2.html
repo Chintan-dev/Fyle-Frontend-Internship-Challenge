@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Fyle Frontend Internship Challenge</title>
+        <link rel="stylesheet" href="./style.css">
+        <link rel="stylesheet" href="./bootstrap.min.css">
+        <script src="./angular.min.js"></script>
+        <!-- <script src="./main2.js"></script> -->
+        <script src="./main2.js"></script>
+</head>
+
+<body ng-app="data" ng-controller="controller1">
+        <div class="container">
+                <div class="row">
+                        <div class="col header"
+                                style="display: flex;flex-wrap: wrap;justify-content: center;align-items: center;">
+                                <div class="userimgbox">
+                                        <img src="{{userprofile}}" alt="">
+                                </div>
+                                <div class="link">
+                                        <a href="{{userlink}}">
+                                                <img src="./link.jpg" alt="" width="30px">
+                                                {{userlink}}</a>
+                                </div>
+                        </div>
+
+                        <div class="col" style="margin: 60px 0;">
+                                <div class="data">
+                                        <div class="name">
+                                                <h1>{{username}}</h1>
+                                        </div>
+                                        <div class="bio">bio goes here</div>
+                                        <div class="loction">
+                                                <img class="iconloction" src="./loction icon.jpg" alt="">
+                                                india
+                                        </div>
+                                        <div class="link">
+                                                <a href="https://chintu2011.github.io/shopping_card/">
+                                                        https://chintu2011.github.io/shopping_card/</a>
+                                        </div>
+                                </div>
+                        </div>
+                        <div class="col"></div>
+                </div>
+
+                <div class="row"
+                        style="display: flex;flex-wrap: wrap;justify-content: center;align-items: center;margin: 20px 0;">
+                        <div class="col-md-5 idbox" ng-repeat="x in globalArray">
+                                <div class="nameid">
+                                        <h4>{{x.name}}</h4>
+                                </div>
+                                <div class="description">
+                                        {{x.description}}
+                                </div>
+                                <div class="buttons">
+                                        <button type="button" class="btn btn-primary">{{x.language}}</button>
+                                        <!-- <button type="button" class="btn btn-primary">{{x.btn2}}</button>
+                                        <button type="button" class="btn btn-primary">{{x.btn3}}</button>
+                                        <button type="button" class="btn btn-primary">{{x.btn4}}</button> -->
+
+                                </div>
+                        </div>
+
+                </div>
+        </div>
+        <table id="users"></table>
+        <!-- <script src="./main.js"></script> -->
+
+        <!-- <script src="./app.js"></script> -->
+        <script>
+                var app = angular.module('myApp', []);
+                app.controller('myCtrl', function ($scope, $http) {
+                        $http.get("welcome.htm")
+                                .then(function (response) {
+                                        $scope.myWelcome = response.data;
+                                });
+                });
+        </script>
+</body>
+
+</html>
