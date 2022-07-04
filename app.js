@@ -6,7 +6,8 @@ git.controller('controller1', ($scope) => {
         //$scope.userprofile = './We4ponx-Crysis-3-Crysis-3-1.ico';
 
 
-        $scope.username = 'ganeshgfx';
+//         $scope.username = 'ganeshgfx';
+        $scope.username = 'fireship-io';
         $scope.link = 'https://github.com/' + $scope.username;
         $scope.userlink = 'https://api.github.com/users/' + $scope.username + '/repos';
         $scope.userprofile = 'https://avatars.githubusercontent.com/u/43039255?v=4';
