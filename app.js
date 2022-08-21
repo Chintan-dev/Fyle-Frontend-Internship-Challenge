@@ -10,7 +10,7 @@ git.controller('controller1', ($scope) => {
         $scope.username = 'fireship-io';
         $scope.link = 'https://github.com/' + $scope.username;
         $scope.userlink = 'https://api.github.com/users/' + $scope.username + '/repos';
-        $scope.userprofile = 'https://avatars.githubusercontent.com/u/43039255?v=4';
+        $scope.userprofile = 'https://avatars.githubusercontent.com/u/46283609?s=200&v=4';
         $scope.globalArray = [];
 
         // $scope.bg_black = 'bg_black';
